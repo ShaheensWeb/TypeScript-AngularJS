@@ -1,0 +1,28 @@
+<!--
+Name: Sean Ghazazani	
+August 24th, 2015
+Becoming a more well rounded web developer
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="">
+		  <p>First Name: <input type="text" ng-model="Fname"></p>
+  		  <p>Last Name: <input type="text" ng-model="Lname"></p>
+		  <p ng-bind="Fname">FN</p>
+		  <p ng-bind="Lname">LN</p>
+		</div>
+	</body>
+</html>
+<!--
+Step#1: AngularJS starts automatically when the web page has loaded.
+Step #2: The ng-app directive tells AngularJS that the <div> element is the "owner" of an AngularJS application.
+Step #3: The ng-model directive binds the value of the input field to the application variable name.
+Step #4: The ng-bind directive binds the innerHTML of the <p> element to the application variable name.
+
+Credit: http://www.w3schools.com/angular/angular_intro.asp
+-->
