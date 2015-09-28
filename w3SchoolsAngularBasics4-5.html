@@ -1,0 +1,23 @@
+<!--
+Name: Sean Ghazazani	
+August 24th, 2015
+http://shaheensweb.me
+Angular JS basics thanks to W3 Schools 
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+	<body>
+		<!-- Below is a NON-valid html version of ng-app/ng-bind/ng-init, if HTML validity is important refer to below -->
+		<div ng-app="" ng-init="Fname='Sean'">
+			<p>The name is <span ng-bind="Fname"></span></p>
+		</div>
+		<!-- Below is a valid html version of data-ng-app/data-ng-bind/data-ng-init -->
+		<div data-ng-app="" data-ng-init="Lname='Ghazazani'">
+			<p>The name is <span data-ng-bind="Lname"></span></p>
+		</div>
+	</body>
+</html>

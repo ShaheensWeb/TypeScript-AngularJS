@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		Name: <input type='text' ng-model="name" /> {{ name }} 
+	</div>
+	<div class="container" data-ng-init="names=['sean', 'shaun', 'Shawn']">
+		<h3>Looping! </h3>
+		<ul>
+			<li data-ng-repeat="name in names">{{name}}</li>
+		</ul>
+	</div>
+	<div class="container" data-ng-controller="SimpleController">
+		<h3>Simple Controller!</h3>
+		<ul>
+			<li data-ng-repeat="cust in customers">{{cust.name}} - {{cust.city}}</li>
+ 		</ul>
+	</div>
+	<script src="Scripts/angular.min.js"></script>
+</body>
+<script>
+	var demoApp = angular.module('demoApp', []);
+	
+	demoApp.controller('SimpleController', function SimpleController($scope){
+		$scope.customers = [ 
+			{name: 'bob', city: 'Ottawa'},
+			{name: 'jon', city: 'Toronto'},
+			{name: 'steph', city: 'Montreal'},
+			{name: 'laura', city: 'Vancouver'}
+
+		];
+	});
+</script>
+<html>
